@@ -7,23 +7,27 @@ import { useTina } from 'tinacms/dist/react';
 import Link from "next/link";
 import { ChevronDown, ChevronUp, Menu } from "lucide-react";
 import { navbarQuery } from "@/tina/queries/navbarQuery";
+import client from "@/tina/__generated__/client";
 
 
 type Props = {
-    data: any;
-    variables: object;
-    query: string;
-}
+  data: any;
+};
 
-const Navbar = (props: Props) => {
+const Navbar =  ({ data }: Props) => {
 
-    const { data } = useTina({
-        query: navbarQuery,
-        variables: {
-            relativePath: 'navbar.md',
-        },
-        data: props.data,
-    });
+    // const { data } = useTina({
+    //     query: navbarQuery,
+    //     variables: {
+    //         relativePath: 'navbar.md',
+    //     },
+    //     data: props.data,
+    // });
+
+    // const { data }: any = await client.queries.menu({
+    //     relativePath: "navbar.md",
+    // });
+    const navData: any = data?.menu
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [openSubmenuIndex, setOpenSubmenuIndex] = useState<number | null>(null);
@@ -32,7 +36,7 @@ const Navbar = (props: Props) => {
         setOpenSubmenuIndex(openSubmenuIndex === index ? null : index);
     };
 
-    // console.log(data, "navbar.tsx");
+    // console.log(navData, "navbar.tsx");
 
 
     return (
@@ -40,7 +44,7 @@ const Navbar = (props: Props) => {
             <div className="flex justify-around items-center px-4 py-3 md:px-10">
                 {/* Logo */}
                 <Link href="/">
-                    <Image src={data?.logo?.url} alt={data?.logo?.alt} width={50} height={50} />
+                    <Image src={navData?.logo?.url} alt={navData?.logo?.alt} width={50} height={50} />
                 </Link>
 
                 {/* Hamburger Icon */}
@@ -52,7 +56,7 @@ const Navbar = (props: Props) => {
                 </button>
 
                 {/* Search Icon */}
-                {/* {data?.showSearch && (
+                {/* {navData?.showSearch && (
                     <div className="hidden md:block cursor-pointer">
                         <Image src="/search-icon.svg" alt="Search" width={20} height={20} />
                     </div>
@@ -60,7 +64,7 @@ const Navbar = (props: Props) => {
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex gap-6 items-center">
-                    {data?.links?.map((link: any, i: any) => (
+                    {navData?.links?.map((link: any, i: any) => (
                         <div key={i} className="relative group">
                             {link.url ? (
                                 <Link href={link.url} className="hover:underline">
@@ -88,7 +92,7 @@ const Navbar = (props: Props) => {
             {/* Mobile Nav */}
             {mobileMenuOpen && (
                 <nav className="flex flex-col md:hidden px-4 pb-4">
-                    {data.links.map((link: any, i: any) => (
+                    {navData.links.map((link: any, i: any) => (
                         <div key={i} className="py-2">
                             {link.url ? (
                                 <Link href={link.url} className="block py-1">
@@ -115,7 +119,7 @@ const Navbar = (props: Props) => {
                             )}
                         </div>
                     ))}
-                    {data.showSearch && (
+                    {navData.showSearch && (
                         <div className="pt-2">
                             <Image src="/search-icon.svg" alt="Search" width={20} height={20} />
                         </div>

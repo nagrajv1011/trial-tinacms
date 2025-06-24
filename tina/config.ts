@@ -2,6 +2,9 @@ import { defineConfig } from "tinacms";
 import { PageCollection } from "./collections/page";
 import { NavbarCollection } from "./collections/navbar";
 import { ContactUsCollection } from "./collections/contact";
+import { alumniCollection } from "./collections/alumni";
+import { alumniImagesCollection } from "./collections/alumniImages";
+// import { FaqCollection } from "./collections/faq";
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -30,6 +33,13 @@ export default defineConfig({
   },
   // See docs on content modeling for more info on how to setup new content models: https://tina.io/docs/schema/
   schema: {
-    collections: [PageCollection, NavbarCollection, ContactUsCollection],
+    collections: [
+      PageCollection,
+      NavbarCollection,
+      ContactUsCollection,
+      alumniCollection,
+      // alumniImagesCollection
+      // FaqCollection,
+    ],
   },
 });
