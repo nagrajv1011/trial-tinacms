@@ -24,7 +24,7 @@ links:
       - label: CIDTL
         url: /about-us/cidtl
   - label: Cambridge International
-    url: /cambridge
+    url: /the-school
   - label: International Baccalaureate
     url: /ib
   - label: The College

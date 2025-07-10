@@ -1,9 +1,10 @@
 import { defineConfig } from "tinacms";
-import { PageCollection } from "./collections/page";
+// import { PageCollection } from "./collections/page";
 import { NavbarCollection } from "./collections/navbar";
 import { ContactUsCollection } from "./collections/contact";
 import { alumniCollection } from "./collections/alumni";
 import { alumniImagesCollection } from "./collections/alumniImages";
+import { PageCollection } from "./collections/pageBlock";
 // import { FaqCollection } from "./collections/faq";
 
 // Your hosting provider likely exposes this as an environment variable

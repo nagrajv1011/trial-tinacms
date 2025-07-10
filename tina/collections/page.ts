@@ -1,6 +1,6 @@
 import type { Collection } from "tinacms";
 
-export const PageCollection: Collection = {
+export const PageCollections: Collection = {
     name: "post",
     label: "Posts",
     path: "content/posts",
