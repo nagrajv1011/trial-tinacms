@@ -6,5 +6,11 @@ export const imageCardBlock = {
     { name: "title", type: "string" },
     { name: "image", type: "image" },
     { name: "alt", type: "string" },
+    {
+      name: "slug",
+      label: "Slug (used in URL path)",
+      type: "string",
+      required: false,
+    },
   ],
 };

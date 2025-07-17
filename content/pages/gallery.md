@@ -7,7 +7,7 @@ blocks:
       - items:
           - title: Innovation Hub
             image: /caie-1.png
-            slug: innovation-hub
+            slug: /posts/gallery/innovation-hub
         _template: gallery_grid
       - items:
           - title: Aikyam 2023

@@ -22,6 +22,11 @@ import { separatorBlock } from "../blocks/separatorBlock";
 import { imageBlock } from "../blocks/imageBlock";
 import { youtubeBlock } from "../blocks/youtubeBlock";
 import { carouselBlock } from "../blocks/carouselBlock";
+import { circleImageCardBlock } from "../blocks/circleImageCardBlock";
+import { imageTextBlock } from "../blocks/imageTextBlock";
+import { linkBlock } from "../blocks/linkBlock";
+import { pdfViewerBlock } from "../blocks/pdfViewerBlock";
+import { buttonBlock } from "../blocks/buttonBlock";
 
 export const PageCollection: Collection = {
   label: "Pages",
@@ -67,8 +72,12 @@ export const PageCollection: Collection = {
         separatorBlock,
         imageBlock,
         youtubeBlock,
-        carouselBlock
-
+        carouselBlock,
+        circleImageCardBlock,
+        imageTextBlock,
+        linkBlock,
+        pdfViewerBlock,
+        buttonBlock
         // titleBlock,
         // separatorBlock,
         // twoColBlock,

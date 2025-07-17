@@ -7,7 +7,7 @@ blocks:
     _template: title_block
   - _template: separator
   - text: Office Bearers
-    _template: title_block
+    _template: subtitle_block
   - tableColumns:
       - Name
       - Designation
@@ -24,7 +24,7 @@ blocks:
             _template: text_cell
     _template: table_block
   - text: Managing Council
-    _template: title_block
+    _template: subtitle_block
   - tableColumns:
       - Name
       - Designation

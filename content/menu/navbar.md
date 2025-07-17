@@ -21,14 +21,14 @@ links:
         url: /about-us/accreditations
       - label: Faculty
         url: /about-us/faculty
-      - label: CIDTL
+      - label: PDQ Centre
         url: /about-us/cidtl
   - label: Cambridge International
     url: /the-school
   - label: International Baccalaureate
-    url: /ib
+    url: /international-baccalaureate
   - label: The College
-    url: /college
+    url: /the-college
   - label: Announcements
     url: /announcements
   - label: Admission

@@ -37,12 +37,12 @@ export const AccordionBlock = ({
         <AccordionItem key={idx} value={`item-${idx}`}>
           <AccordionTrigger>{item.title}</AccordionTrigger>
           <AccordionContent>
-            {item.content.__typename === 'text' && (
+            {item.content?.__typename === 'text' && (
               <div className="prose dark:prose-invert">
                 <TinaMarkdown content={item.content.body} />
               </div>
             )}
-            {item.content.__typename === 'nested_accordion' && (
+            {item.content?.__typename === 'nested_accordion' && (
               <NestedAccordion items={item.content.items} />
             )}
           </AccordionContent>

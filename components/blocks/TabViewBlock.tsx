@@ -23,7 +23,7 @@ export const TabViewBlock = ({ tabs }: { tabs: { label: string; content: any[] }
       </div>
       <div>
         {tabs[activeTab]?.content?.map((block: any, i: number) => {
-          console.log(block,"Tabview");
+          // console.log(block,"Tabview");
           
           const Component = blockComponents[block.__typename];
 

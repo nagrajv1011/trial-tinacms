@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import client from "@/tina/__generated__/client";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { BreadcrumbResponsive } from "@/components/Breadcrumbs";
 import { Separator } from "@/components/ui/separator";
@@ -38,12 +37,6 @@ export default async function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavbarWrapper data={res?.data} />
-        {/* <NavbarWrapper /> */}
-        {/* <Navbar
-          data={JSON.parse(JSON.stringify(res?.data?.menu))}
-          query={res.query}
-          variables={res.variables}
-        /> */}
         <div className="min-h-screen bg-gray-100 px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8">
           <div className="w-full h-full bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8 overflow-auto">
             <BreadcrumbResponsive />
@@ -51,7 +44,6 @@ export default async function RootLayout({
             {children}
           </div>
         </div>
-        {/* {children} */}
         <Footer />
       </body>
     </html>

@@ -11,6 +11,7 @@ export const accordionBlock = {
         {
           name: "content",
           type: "object",
+          ui: { component: "blocks" }, // <-- Tell Tina this is a blocks field
           templates: [
             {
               name: "text",

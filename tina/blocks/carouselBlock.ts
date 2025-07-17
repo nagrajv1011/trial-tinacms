@@ -32,6 +32,18 @@ export const carouselBlock = {
           label: "Alt Text",
           type: "string",
         },
+        {
+          name: "link",
+          label: "Optional Link",
+          type: "string",
+          required: false,
+        },
+        {
+          name: "linkText",
+          label: "Optional Link Text (Bold, above button)",
+          type: "string",
+          required: false,
+        },
       ],
     },
   ],
